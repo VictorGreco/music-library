@@ -1,19 +1,3 @@
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** victorgreco, repo_name, twitter_handle, email
--->
-
-
-
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -29,28 +13,26 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/victorgreco/repo_name">
+  <a href="https://github.com/victorgreco/music-library">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">YOUR_TITLE</h3>
+  <h3 align="center">Music Library</h3>
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
+    A fancy way to find your favorite songs, artists and albums.
     <br />
-    <a href="https://github.com/victorgreco/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/victorgreco/music-library"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/victorgreco/repo_name">View Demo</a>
+    <a href="https://github.com/victorgreco/music-library">View Demo</a>
     ·
-    <a href="https://github.com/victorgreco/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/victorgreco/music-library/issues">Report Bug</a>
     ·
-    <a href="https://github.com/victorgreco/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/victorgreco/music-library/issues">Request Feature</a>
   </p>
 </p>
 
@@ -78,24 +60,61 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`victorgreco`, `repo_name`, `twitter_handle`, `email`
-
-
 ### Built With
 
 * []()
 * []()
 * []()
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
@@ -106,9 +125,9 @@ npm install npm@latest -g
 
 ### Installation
 
-1. Clone the repo
+1. Clone the music-library
 ```sh
-git clone https://github.com/victorgreco/repo_name.git
+git clone https://github.com/victorgreco/music-library.git
 ```
 2. Install NPM packages
 ```sh
@@ -129,7 +148,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/victorgreco/repo_name/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/victorgreco/music-library/issues) for a list of proposed features (and known issues).
 
 
 
@@ -158,7 +177,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Victor Greco - [linkedin](https://www.linkedin.com/in/victor-greco/) - victorgreco263@gmail.com
 
-Project Link: [https://github.com/victorgreco/repo_name](https://github.com/victorgreco/repo_name)
+Project Link: [https://github.com/victorgreco/music-library](https://github.com/victorgreco/music-library)
 
 
 
@@ -175,16 +194,16 @@ Project Link: [https://github.com/victorgreco/repo_name](https://github.com/vict
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/victorgreco/repo.svg?style=flat-square
-[contributors-url]: https://github.com/victorgreco/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/victorgreco/repo.svg?style=flat-square
-[forks-url]: https://github.com/victorgreco/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/victorgreco/repo.svg?style=flat-square
-[stars-url]: https://github.com/victorgreco/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/victorgreco/repo.svg?style=flat-square
-[issues-url]: https://github.com/victorgreco/repo/issues
-[license-shield]: https://img.shields.io/github/license/victorgreco/repo.svg?style=flat-square
-[license-url]: https://github.com/victorgreco/repo/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/victorgreco/music-library.svg?style=flat-square
+[contributors-url]: https://github.com/victorgreco/music-library/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/victorgreco/music-library.svg?style=flat-square
+[forks-url]: https://github.com/victorgreco/music-library/network/members
+[stars-shield]: https://img.shields.io/github/stars/victorgreco/music-library.svg?style=flat-square
+[stars-url]: https://github.com/victorgreco/music-library/stargazers
+[issues-shield]: https://img.shields.io/github/issues/victorgreco/music-library.svg?style=flat-square
+[issues-url]: https://github.com/victorgreco/music-library/issues
+[license-shield]: https://img.shields.io/github/license/victorgreco/music-library.svg?style=flat-square
+[license-url]: https://github.com/victorgreco/music-library/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/victor-greco/
 [product-screenshot]: images/screenshot.png
