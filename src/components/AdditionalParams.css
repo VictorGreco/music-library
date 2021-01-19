@@ -1,0 +1,27 @@
+.additionalParams {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.additionalParams_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.additionalParams_header_line {
+    width: 100%;
+    background: #000;
+    height: 5px;
+}
+
+.additionalParams_header_title {
+    min-width: fit-content;
+    margin: 10px;
+}
+
+.additionalParams_filters {
+    display: flex;
+    justify-content: space-around;
+}
