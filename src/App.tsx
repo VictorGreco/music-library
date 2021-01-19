@@ -4,6 +4,8 @@ import logo from './logo.svg';
 import './App.css';
 import env from 'react-dotenv';
 
+const jsonp = require('jsonp');
+
 function App() {
 
   return (
