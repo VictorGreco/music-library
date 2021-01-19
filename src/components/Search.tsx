@@ -3,7 +3,11 @@ import Dropdown from './Dropdown';
 import Input from './Input';
 import './Search.css';
 
-class Search extends React.Component {
+interface Props {
+    callback: any
+}
+
+class Search extends React.Component<Props> {
     state = {
         category: 'song',
         search_term: ''
@@ -14,7 +18,7 @@ class Search extends React.Component {
     }
 
     componentDidUpdate() {
-        console.log(this.state)
+        this.props.callback(this.state)
     }
 
     render(): JSX.Element {

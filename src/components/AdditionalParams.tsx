@@ -4,7 +4,11 @@ import FilterCard from './FilterCard';
 import './AdditionalParams.css';
 import Input from './Input';
 
-class AdditionalParams extends React.Component {
+interface Props {
+    callback: any
+}
+
+class AdditionalParams extends React.Component<Props> {
 
     state = {
         country: {
@@ -78,7 +82,7 @@ class AdditionalParams extends React.Component {
     }
 
     componentDidUpdate() {
-        console.log(this.state)
+        this.props.callback(this.state)
     }
 
     render(): JSX.Element {
