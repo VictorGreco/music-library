@@ -4,9 +4,17 @@ import Input from './Input';
 import './Search.css';
 
 class Search extends React.Component {
+    state = {
+        category: 'song',
+        search_term: ''
+    }
     
     onSearchUpdate = (name: string, value: string ): void => {
-        console.log(name, value)
+        name === 'category' ? this.setState({category: value.toLowerCase()}) : this.setState({search_term: value.toLowerCase()})
+    }
+
+    componentDidUpdate() {
+        console.log(this.state)
     }
 
     render(): JSX.Element {
@@ -17,7 +25,7 @@ class Search extends React.Component {
                 </div>
                 <div className="search_container_fields">
                     <Dropdown onUpdate={this.onSearchUpdate} name="category" options={['Song', 'Artist', 'Album', 'Music Video']}/>
-                    <Input name= "search term" onUpdate={this.onSearchUpdate} type="text" placeholder="name..." />
+                    <Input name= "search_term" onUpdate={this.onSearchUpdate} type="text" placeholder="name..." />
                 </div>
             </div>
         );

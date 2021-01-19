@@ -13,7 +13,7 @@ interface Props {
 function Input({ onUpdate, type, name, placeholder, min, max }: Props ): JSX.Element {
     
     const onInputChange = (e: any): void => {
-        if(type == 'checkbox') {
+        if(type === 'checkbox') {
             return onUpdate(e.target.name, e.target.checked)
         }
         onUpdate(e.target.name, e.target.value)
