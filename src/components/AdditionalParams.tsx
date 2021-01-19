@@ -5,6 +5,11 @@ import './AdditionalParams.css';
 import Input from './Input';
 
 class AdditionalParams extends React.Component {
+
+    onSearchUpdate = (name: string, value: string): void => {
+        console.log(name, value)
+    }
+
     render(): JSX.Element {
         return (
             <div className="additionalParams">
@@ -14,14 +19,14 @@ class AdditionalParams extends React.Component {
                     <div className="additionalParams_header_line"></div>
                 </div>
                 <div className="additionalParams_filters">
-                    <FilterCard title="Country">
-                        <Dropdown options={['Spain', 'France', 'Italy']} />
+                    <FilterCard onUpdate={this.onSearchUpdate} title="Country">
+                        <Dropdown onUpdate={this.onSearchUpdate} name="country" options={['Spain', 'France', 'Italy']} />
                     </FilterCard>
-                    <FilterCard title="Explicit Content">
-                        <Dropdown options={['Yes', 'No']} />
+                    <FilterCard onUpdate={this.onSearchUpdate} title="Explicit Content">
+                        <Dropdown onUpdate={this.onSearchUpdate} name="explicit content" options={['Yes', 'No']} />
                     </FilterCard>
-                    <FilterCard title="Limit">
-                        <Input type="number" min={1} max={200} placeholder="1..200" />
+                    <FilterCard onUpdate={this.onSearchUpdate} title="Limit">
+                        <Input name="limit" onUpdate={this.onSearchUpdate} type="number" min={1} max={200} placeholder="1..200" />
                     </FilterCard>
                 </div>
             </div>
