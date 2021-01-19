@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import env from 'react-dotenv';
-import Search from './components/Search';
-import AdditionalParams from './components/AdditionalParams';
+import Search from './components/Search/Search';
+import AdditionalParams from './components/AdditionalParams/AdditionalParams';
 
 const jsonp = require('jsonp');
 

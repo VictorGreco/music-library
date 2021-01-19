@@ -1,17 +1,17 @@
 import React from 'react';
 import './FilterCard.css';
-import Input from './Input';
+import Input from '../Input/Input';
 
-interface Props {
-    onUpdate: any;
+interface FilterCardProps {
+    onUpdate: Function;
     title: string;
     children: JSX.Element
 }
 
-function FilterCard({ onUpdate, title, children}: Props ): JSX.Element {
-    const onInputChange =  (name: string, value: string ): void => {
-        onUpdate(name, value)
-    }
+function FilterCard({ onUpdate, title, children }: FilterCardProps): JSX.Element {
+    const onInputChange = (name: string, value: string): void => {
+        onUpdate(name, value);
+    };
 
     return (
         <div className="filterCard">
@@ -21,7 +21,7 @@ function FilterCard({ onUpdate, title, children}: Props ): JSX.Element {
             <p className="filterCard_title">{title}</p>
             {children}
         </div>
-    )
+    );
 }
 
 export default FilterCard;
