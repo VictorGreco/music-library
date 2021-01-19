@@ -1,4 +1,5 @@
 import React from 'react';
+import './Input.css';
 
 function Input({ type, placeholder }: { type: string; placeholder: string }): JSX.Element {
     return (

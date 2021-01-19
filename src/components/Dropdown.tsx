@@ -1,4 +1,5 @@
 import React from 'react';
+import './Dropdown.css';
 
 function Dropdown({ options }: { options: string[] }): JSX.Element {
     const optionsList = options.map((option: string): JSX.Element => {
