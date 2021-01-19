@@ -1,4 +1,6 @@
 import React from 'react';
+import Dropdown from './Dropdown';
+import FilterCard from './FilterCard';
 
 class AdditionalParams extends React.Component {
     render(): JSX.Element {
@@ -10,7 +12,9 @@ class AdditionalParams extends React.Component {
                     <span className="additionalParams_header_line"></span>
                 </div>
                 <div className="additionalParams_filters">
-                    
+                    <FilterCard title="Country">
+                        <Dropdown options={['Spain', 'France', 'Italy']} />
+                    </FilterCard>
                 </div>
             </div>
         )
