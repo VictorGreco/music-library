@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
+import ReactDom from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
 import env from 'react-dotenv';
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,7 +19,6 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {env.API_URL}
         </a>
       </header>
     </div>
