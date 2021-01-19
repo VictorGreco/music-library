@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "997bf5fa-81e0-4918-9b70-474093243ce4",
+		"name": "itunes-store-api",
+		"description": "https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get music by name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://itunes.apple.com/search?term=bad+guy&country=US&media=music&entity=musicTrack&limit=200&lang=en_us&explicit=No",
+					"protocol": "https",
+					"host": [
+						"itunes",
+						"apple",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "term",
+							"value": "bad+guy"
+						},
+						{
+							"key": "country",
+							"value": "US"
+						},
+						{
+							"key": "media",
+							"value": "music"
+						},
+						{
+							"key": "entity",
+							"value": "musicTrack"
+						},
+						{
+							"key": "limit",
+							"value": "200"
+						},
+						{
+							"key": "lang",
+							"value": "en_us"
+						},
+						{
+							"key": "explicit",
+							"value": "No"
+						}
+					]
+				},
+				"description": "Returns song JSON object retrived by name"
+			},
+			"response": []
+		},
+		{
+			"name": "Get artist by name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://itunes.apple.com/search?term=billie&country=US&media=all&entity=musicArtist&limit=200&lang=en_us&explicit=No",
+					"protocol": "https",
+					"host": [
+						"itunes",
+						"apple",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "term",
+							"value": "billie"
+						},
+						{
+							"key": "country",
+							"value": "US"
+						},
+						{
+							"key": "media",
+							"value": "all"
+						},
+						{
+							"key": "entity",
+							"value": "musicArtist"
+						},
+						{
+							"key": "limit",
+							"value": "200"
+						},
+						{
+							"key": "lang",
+							"value": "en_us"
+						},
+						{
+							"key": "explicit",
+							"value": "No"
+						}
+					]
+				},
+				"description": "Returns song JSON object retrived by name"
+			},
+			"response": []
+		},
+		{
+			"name": "Get album by name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://itunes.apple.com/search?term=Live+at+Third+Man+Records&country=US&media=music&entity=album&limit=200&lang=en_us&explicit=No",
+					"protocol": "https",
+					"host": [
+						"itunes",
+						"apple",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "term",
+							"value": "Live+at+Third+Man+Records"
+						},
+						{
+							"key": "country",
+							"value": "US"
+						},
+						{
+							"key": "media",
+							"value": "music"
+						},
+						{
+							"key": "entity",
+							"value": "album"
+						},
+						{
+							"key": "limit",
+							"value": "200"
+						},
+						{
+							"key": "lang",
+							"value": "en_us"
+						},
+						{
+							"key": "explicit",
+							"value": "No"
+						}
+					]
+				},
+				"description": "Returns song JSON object retrived by name"
+			},
+			"response": []
+		},
+		{
+			"name": "Get music videos by name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://itunes.apple.com/search?term=bad+guy&country=US&media=musicVideo&limit=200&lang=en_us&explicit=No",
+					"protocol": "https",
+					"host": [
+						"itunes",
+						"apple",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "term",
+							"value": "bad+guy"
+						},
+						{
+							"key": "country",
+							"value": "US"
+						},
+						{
+							"key": "media",
+							"value": "musicVideo"
+						},
+						{
+							"key": "limit",
+							"value": "200"
+						},
+						{
+							"key": "lang",
+							"value": "en_us"
+						},
+						{
+							"key": "explicit",
+							"value": "No"
+						}
+					]
+				},
+				"description": "Returns song JSON object retrived by name"
+			},
+			"response": []
+		}
+	]
+}
