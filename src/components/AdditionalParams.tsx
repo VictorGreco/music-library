@@ -2,6 +2,7 @@ import React from 'react';
 import Dropdown from './Dropdown';
 import FilterCard from './FilterCard';
 import './AdditionalParams.css';
+import Input from './Input';
 
 class AdditionalParams extends React.Component {
     render(): JSX.Element {
@@ -15,6 +16,12 @@ class AdditionalParams extends React.Component {
                 <div className="additionalParams_filters">
                     <FilterCard title="Country">
                         <Dropdown options={['Spain', 'France', 'Italy']} />
+                    </FilterCard>
+                    <FilterCard title="Explicit Content">
+                        <Dropdown options={['Yes', 'No']} />
+                    </FilterCard>
+                    <FilterCard title="Limit">
+                        <Input type="number" min={1} max={200} placeholder="1..200" />
                     </FilterCard>
                 </div>
             </div>
