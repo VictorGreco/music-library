@@ -9,7 +9,7 @@ const jsonp = require('jsonp');
 
 function App(): JSX.Element {
   const [searchResponse, setSearchResponse]: any = useState([]);
-  const [search, setSearch]: any = useState({ category: 'music', search_term: '' });
+  const [search, setSearch]: any = useState({ category: 'musicTrack', search_term: '' });
   const [additionalParams, setAdditionalParams]: any = useState({
     country: {
       checked: false,
@@ -32,7 +32,8 @@ function App(): JSX.Element {
         params: {
           term: search?.search_term,
           country: additionalParams?.country?.checked ? additionalParams?.country.value : 'ES',
-          media: search?.category,
+          media: 'music',
+          entity: search?.category,
           limit: additionalParams?.limit?.checked ? additionalParams?.limit.value : '10',
           lang: 'en_us',
           explicit: additionalParams?.explicit_content?.checked ? additionalParams?.explicit_content.value : 'No'
@@ -43,7 +44,6 @@ function App(): JSX.Element {
       setSearchResponse(await axios.get('https://itunes.apple.com/search', config));
     })();
 
-    searchResponse?.data?.results.map((item: any) => { console.log(item) });
 
   }, [search, additionalParams]);
 
