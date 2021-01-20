@@ -128,7 +128,7 @@ function SearchResultDisplayer({ data }: any): JSX.Element {
 
     return (
         <div className="search-result-displayer">
-            {data.map((item: any, index: number) => {
+            {data && data?.map((item: any, index: number) => {
                 switch (item.kind || item.wrapperType) {
                     case 'song':
                         return songItem(item, index);
