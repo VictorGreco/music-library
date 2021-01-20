@@ -39,10 +39,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="./images/search_result_view.png" width="auto" height="450" >
-<img src="./images/search_result_view_2.png" width="auto" height="450" >
-<img src="./images/select_option_view.png" width="auto" height="450" >
-<img src="./images/choose_country_view.png" width="auto" height="450" >
+<img src="./images/screenshot.png">
 
 ### Built With
 
