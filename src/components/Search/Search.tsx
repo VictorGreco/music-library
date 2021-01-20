@@ -23,7 +23,7 @@ function Search({ setState }: SearchProps): JSX.Element {
                 <h1>Music Library</h1>
             </div>
             <div className="search_container_fields">
-                <Dropdown onUpdate={searchUpdate} name="category" options={['Song', 'Artist', 'Album', 'Music Video']} />
+                <Dropdown onUpdate={searchUpdate} name="category" options={['music', 'all', 'podcast', 'musicVideo']} />
                 <Input name="search_term" onUpdate={searchUpdate} type="text" placeholder="name..." />
             </div>
         </div>

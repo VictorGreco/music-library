@@ -49,7 +49,7 @@ interface MusicVideoItem {
     trackViewUrl: string;
 }
 
-function SearchResultDisplayer({ data }: any): JSX.Element {
+function SearchResultDisplayer({ results }: any): JSX.Element {
     const millisToMinutesAndSeconds = (millis: number): string => 
         `${Math.floor(millis / 60000)} min ${((millis % 60000) / 1000).toFixed(0)} sec`;
 
@@ -128,7 +128,7 @@ function SearchResultDisplayer({ data }: any): JSX.Element {
 
     return (
         <div className="search-result-displayer">
-            {data.map((item: any, index: number) => {
+            {results && results.map((item: any, index: number) => {
                 switch (item.kind || item.wrapperType) {
                     case 'song':
                         return songItem(item, index);
