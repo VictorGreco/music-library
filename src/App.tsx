@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import env from 'react-dotenv';
 import axios from 'axios';
-import Search from './components/Search';
-import AdditionalParams from './components/AdditionalParams';
-import SearchResultDisplayer from './components/SearchResultDisplayer';
+import Search from './components/Search/Search';
+import AdditionalParams from './components/AdditionalParams/AdditionalParams';
+import SearchResultDisplayer from './components/SearchResult/SearchResultDisplayer';
 
 const jsonp = require('jsonp');
 

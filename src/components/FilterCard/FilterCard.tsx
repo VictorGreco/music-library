@@ -1,6 +1,6 @@
 import React from 'react';
 import './FilterCard.css';
-import Input from './Input';
+import Input from '../Input/Input';
 
 interface Props {
     onUpdate: any;

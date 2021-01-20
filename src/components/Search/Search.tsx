@@ -1,6 +1,6 @@
 import React from 'react';
-import Dropdown from './Dropdown';
-import Input from './Input';
+import Dropdown from '../Dropdown/Dropdown';
+import Input from '../Input/Input';
 import './Search.css';
 
 interface Props {

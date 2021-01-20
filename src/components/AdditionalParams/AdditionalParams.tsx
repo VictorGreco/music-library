@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import Dropdown from './Dropdown';
-import FilterCard from './FilterCard';
+import Dropdown from '../Dropdown/Dropdown';
+import FilterCard from '../FilterCard/FilterCard';
 import './AdditionalParams.css';
-import Input from './Input';
+import Input from '../Input/Input';
 
 interface Props {
     callback: any
