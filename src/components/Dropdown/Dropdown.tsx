@@ -1,25 +1,43 @@
 import React from 'react';
 import './Dropdown.css';
 
-interface DropdownProps {
-    onUpdate: Function;
+interface Props {
+    onUpdate: any;
     name: string;
-    options: string[];
+    options: any
 }
 
-function Dropdown({ onUpdate, name, options }: DropdownProps): JSX.Element {
-    const optionsList = options.map((option: string, index: number): JSX.Element =>
-        <option key={index} value={option.toLowerCase()}>{option}</option>);
+function Dropdown({ onUpdate, name, options }: Props): JSX.Element {
+    if (name === 'country') {
 
-    const onOptionChange = ({ target }: any): void => {
-        onUpdate(target.name, target.value);
-    };
+        const countryList = options && options?.map((option: any): JSX.Element =>
+            <option key={option.a2} value={option.a2}>{option.name}</option>);
+
+        const onOptionChange = (e: any): void => {
+            onUpdate(e.target.name, e.target.value)
+        }
+
+        return (
+            <div className="dropdown">
+                <select name={name} onChange={(e) => { onOptionChange(e) }}>{countryList}</select>
+            </div>
+        );
+
+    }
+
+    const optionsList = options.map((option: string, index: number): JSX.Element => {
+        return <option key={index} value={option.toLowerCase()}>{option}</option>
+    })
+
+    const onOptionChange = (e: any): void => {
+        onUpdate(e.target.name, e.target.value)
+    }
 
     return (
         <div className="dropdown">
             <select name={name} onChange={(e) => { onOptionChange(e) }}>{optionsList}</select>
         </div>
-    );
+    )
 }
 
 export default Dropdown;
