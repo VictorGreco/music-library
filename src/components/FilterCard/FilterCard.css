@@ -1,23 +1,10 @@
 .filterCard {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 10px;
-    margin: 10px;
-    width: auto;
-    border: 2px solid #555;
-}
-
-.filterCard_checkbox {
-    position: relative;
-    left: -22px
+    padding: 5px;
 }
 
 .filterCard_checkbox .input input {
     height: 20px;
     width: 20px;
-}
-
-.filterCard_title {
-    margin-right: 10px;
 }

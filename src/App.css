@@ -1,16 +1,18 @@
 :root {
-    --back-color: #303841;
-    --main-color: #3A4750;
-    --secondary-color: #F6C90E;
-    --third-color: #EEEEEE;
+    --back-color: #1a2c5b;
+    --main-color: #3e4e88;
+    --secondary-color: #7971ea;
+    --third-color: #b8dff0;
+    --fourth-color: #CF245E;
     --white: #FFFFFF;
 }
 .App {
-    background: linear-gradient(45deg, var(--back-color), var(--back-color) 75%, var(--main-color) 90%);
-    color: var(--third-color);
+    background: linear-gradient(25deg, black 5%, var(--back-color) 25%, var(--secondary-color) 50%, var(--third-color) 100%);
+    color: var(--white);
+    min-height: 100vh;
 }
 
 a {
-    color: var(--secondary-color);
+    color: var(--fourth-color);
     text-decoration: none;
 }
