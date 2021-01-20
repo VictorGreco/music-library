@@ -27,7 +27,6 @@ function App(): JSX.Element {
 
 
   useEffect(() => {
-
     (async () => {
       const config = {
         params: {
