@@ -9,12 +9,12 @@ interface Props {
 
 class Search extends React.Component<Props> {
     state = {
-        category: 'music',
+        category: 'musicTrack',
         search_term: ''
     }
     
     onSearchUpdate = (name: string, value: string ): void => {
-        name === 'category' ? this.setState({category: value.toLowerCase()}) : this.setState({search_term: value.toLowerCase()})
+        name === 'category' ? this.setState({category: value}) : this.setState({search_term: value})
     }
 
     componentDidUpdate() {
@@ -28,7 +28,7 @@ class Search extends React.Component<Props> {
                     <h1>Music Library</h1>
                 </div>
                 <div className="search_container_fields">
-                    <Dropdown onUpdate={this.onSearchUpdate} name="category" options={['music', 'all', 'podcast', 'musicVideo']}/>
+                    <Dropdown onUpdate={this.onSearchUpdate} name="category" options={['musicTrack', 'musicArtist', 'album', 'musicVideo']}/>
                     <Input name= "search_term" onUpdate={this.onSearchUpdate} type="text" placeholder="name..." />
                 </div>
             </div>

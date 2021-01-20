@@ -26,7 +26,7 @@ function Dropdown({ onUpdate, name, options }: Props): JSX.Element {
     }
 
     const optionsList = options.map((option: string, index: number): JSX.Element => {
-        return <option key={index} value={option.toLowerCase()}>{option}</option>
+        return <option key={index} value={option}>{option.replace(option[0], option[0].toUpperCase())}</option>
     })
 
     const onOptionChange = (e: any): void => {
