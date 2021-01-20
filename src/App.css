@@ -1,0 +1,16 @@
+:root {
+    --back-color: #303841;
+    --main-color: #3A4750;
+    --secondary-color: #F6C90E;
+    --third-color: #EEEEEE;
+    --white: #FFFFFF;
+}
+.App {
+    background: linear-gradient(45deg, var(--back-color), var(--back-color) 75%, var(--main-color) 90%);
+    color: var(--third-color);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}

@@ -25,3 +25,9 @@
     display: flex;
     justify-content: space-around;
 }
+
+@media only screen and (max-width: 450px) {
+    .additionalParams_filters {
+        flex-direction: column;
+    }
+}
