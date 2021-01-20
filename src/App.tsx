@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import env from 'react-dotenv';
 import axios from 'axios';
 import Search from './components/Search/Search';
 import AdditionalParams from './components/AdditionalParams/AdditionalParams';
