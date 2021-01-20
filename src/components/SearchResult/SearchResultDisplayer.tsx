@@ -5,7 +5,7 @@ interface SongItem {
     artistViewUrl: string;
     contentAdvisoryRating: string;
     kind: string;
-    artworkUrl100: string; 
+    artworkUrl100: string;
     trackName: string;
     artistName: string;
     collectionName: string;
@@ -36,7 +36,7 @@ interface AlbumItem {
 
 interface MusicVideoItem {
     kind: string;
-    trackExplicitness: string; 
+    trackExplicitness: string;
     artworkUrl100: string;
     artistViewUrl: string;
     trackName: string;
@@ -50,7 +50,7 @@ interface MusicVideoItem {
 }
 
 function SearchResultDisplayer({ data }: any): JSX.Element {
-    const millisToMinutesAndSeconds = (millis: number): string => 
+    const millisToMinutesAndSeconds = (millis: number): string =>
         `${Math.floor(millis / 60000)} min ${((millis % 60000) / 1000).toFixed(0)} sec`;
 
     const songItem = ({ artistViewUrl, contentAdvisoryRating, kind, artworkUrl100, trackName, artistName, collectionName, trackPrice, releaseDate, trackTimeMillis, primaryGenreName, previewUrl, trackViewUrl }: SongItem, index: number): JSX.Element => {
@@ -61,16 +61,16 @@ function SearchResultDisplayer({ data }: any): JSX.Element {
                         <span>{kind.toUpperCase()}</span> | <span>{contentAdvisoryRating}</span>
                     </p>
                     <h3>{trackName} - {collectionName}</h3>
-                    <h4>By <a href={artistViewUrl}>{artistName}</a></h4>
-                    <p>{releaseDate.split('-')[0]} · {millisToMinutesAndSeconds(trackTimeMillis)} · {primaryGenreName}</p>
+                    <h4>By <a href={artistViewUrl}>{artistName}</a> · {releaseDate.split('-')[0]} · {millisToMinutesAndSeconds(trackTimeMillis)} · {primaryGenreName}</h4>
+                    <audio controls src={previewUrl}></audio>
+
                     <p>
-                        Buy on <a href={trackViewUrl}> iTunes</a> for {trackPrice} €
+                        <a className="button" href={trackViewUrl}> Buy now </a> for {trackPrice} €
                     </p>
-                    <p>
-                        <audio controls src={previewUrl}></audio>
-                    </p>
+
+
                 </div>
-                <img src={artworkUrl100} width="150" height="150"></img>
+                <img src={artworkUrl100} width="125" height="125"></img>
             </div>
         );
     };
