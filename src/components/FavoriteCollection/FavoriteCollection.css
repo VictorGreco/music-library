@@ -1,0 +1,51 @@
+.favorites {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.favorites_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.favorites_title {
+    font-size: 30px;
+    font-weight: 700;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px;
+}
+
+.favorites_title span {
+    color: red;
+}
+
+.favoriteItem_title {
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.favorites_title span {
+    display: inline-block;
+    text-overflow: ellipsis;
+}
+
+.removeFromFavoriteButton {
+    color: black;
+    font-weight: 900;
+    width: 30px;
+    
+}
+
+@media only screen and (max-width: 828px) {
+    .favorites_container {
+        display: none;
+    }
+}

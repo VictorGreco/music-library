@@ -16,3 +16,14 @@ a {
     color: var(--fourth-color);
     text-decoration: none;
 }
+
+.main_container {
+    display: flex;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 828px) {
+    .main_container {
+        flex-direction: column-reverse;
+    }
+}
