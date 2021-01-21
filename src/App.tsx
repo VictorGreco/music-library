@@ -9,8 +9,9 @@ import FavoriteCollection from './components/FavoriteCollection/FavoriteCollecti
 const jsonp = require('jsonp');
 
 function App(): JSX.Element {
+  const favorites = JSON.parse(`${localStorage.getItem('favoriteItems')}`)  || []
   const [searchResponse, setSearchResponse]: any = useState([]);
-  const [favoriteItems, setFavoriteItems]: any = useState([]);
+  const [favoriteItems, setFavoriteItems]: any = useState(favorites);
   const [search, setSearch]: any = useState({ category: 'musicTrack', search_term: 'it\'s my life' });
   const [additionalParams, setAdditionalParams]: any = useState({
     country: {
@@ -62,8 +63,11 @@ function App(): JSX.Element {
 
   const updateFavorites = function (title: string , media: string, buyNow: string): void {
     setFavoriteItems([...favoriteItems, {...arguments}])
-    console.log(favoriteItems)
   }
+
+  useEffect(() => {
+    localStorage.setItem('favoriteItems', JSON.stringify(favoriteItems))
+  }, [favoriteItems])
 
   return (
     <div className="App">
@@ -71,7 +75,7 @@ function App(): JSX.Element {
       <AdditionalParams callback={onFilterUpdates} />
       <div className="main_container">
         <SearchResultDisplayer onClick={updateFavorites} data={searchResponse?.data?.results} />
-        <FavoriteCollection favorites={favoriteItems} />
+        <FavoriteCollection />
       </div>
     </div>
   );
