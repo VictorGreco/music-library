@@ -4,6 +4,7 @@ import axios from 'axios';
 import Search from './components/Search/Search';
 import AdditionalParams from './components/AdditionalParams/AdditionalParams';
 import SearchResultDisplayer from './components/SearchResult/SearchResultDisplayer';
+import FavoriteCollection from './components/FavoriteCollection/FavoriteCollection';
 
 const jsonp = require('jsonp');
 
@@ -60,7 +61,10 @@ function App(): JSX.Element {
     <div className="App">
       <Search callback={onSearchChange} />
       <AdditionalParams callback={onFilterUpdates} />
-      <SearchResultDisplayer data={searchResponse?.data?.results} />
+      <div className="main_container">
+        <SearchResultDisplayer data={searchResponse?.data?.results} />
+        <FavoriteCollection />
+      </div>
     </div>
   );
 }

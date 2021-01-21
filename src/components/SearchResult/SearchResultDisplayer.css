@@ -1,13 +1,12 @@
 .search-result-displayer {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    flex: 7;
 }
 .card {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 30%;
     padding: 10px;
     margin: 10px;
     font-size: 1.1rem;
