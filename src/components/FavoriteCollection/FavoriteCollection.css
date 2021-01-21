@@ -17,3 +17,23 @@
 .favorites_title span {
     color: red;
 }
+
+.favoriteItem_title {
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.favorites_title span {
+    display: inline-block;
+    text-overflow: ellipsis;
+}
+
+.removeFromFavoriteButton {
+    color: black;
+    font-weight: 900;
+    width: 30px;
+    
+}

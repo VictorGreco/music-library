@@ -75,7 +75,7 @@ function App(): JSX.Element {
       <AdditionalParams callback={onFilterUpdates} />
       <div className="main_container">
         <SearchResultDisplayer onClick={updateFavorites} data={searchResponse?.data?.results} />
-        <FavoriteCollection />
+        <FavoriteCollection favorites={favoriteItems}/>
       </div>
     </div>
   );

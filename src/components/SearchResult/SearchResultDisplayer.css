@@ -13,6 +13,7 @@
     border-radius: 5px;
     color: var(--back-color);
     background-color: var(--white);
+    height: fit-content;
 }
 .card div {
     display: flex;
