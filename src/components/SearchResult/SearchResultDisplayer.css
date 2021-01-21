@@ -5,6 +5,16 @@
     flex-wrap: wrap;
     flex: 5;
 }
+
+.search_title {
+    font-size: 30px;
+    font-weight: 700;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px;
+}
+
 .card {
     display: flex;
     align-items: center;
@@ -23,7 +33,6 @@
     flex-direction: column;
     justify-content: space-around;
     margin: 0 5px 0 0;
-    min-height: 150px;
 }
 
 .addToFavoriteButton {

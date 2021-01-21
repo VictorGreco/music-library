@@ -147,6 +147,7 @@ function SearchResultDisplayer({ data, onClick}: any): JSX.Element {
 
     return (
         <div className="search-result-displayer">
+            <p className="search_title">Search Results</p>
             {data && data?.map((item: SongItem | MusicVideoItem | ArtistItem | AlbumItem, index: number) => {
                 switch (item.kind || item.wrapperType) {
                     case 'song':

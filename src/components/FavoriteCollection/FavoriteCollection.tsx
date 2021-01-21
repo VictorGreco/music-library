@@ -48,7 +48,9 @@ class FavoriteCollection extends React.Component<Props> {
         return (
             <div className="favorites">
                 <p className="favorites_title">Favorites <span>&hearts;</span></p>
-                {this.generateFavoriteList()}
+                <div className="favorites_container">
+                    {this.generateFavoriteList()}
+                </div>
             </div>
         )
     }
