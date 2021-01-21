@@ -25,6 +25,7 @@
 }
 
 .favoriteItem_title {
+    width: 100%;
     font-size: 18px;
     font-weight: 700;
     display: flex;
@@ -32,20 +33,28 @@
     overflow: hidden;
 }
 
-.favorites_title span {
+.favoriteItem_title span {
     display: inline-block;
     text-overflow: ellipsis;
+    height: 20px;
 }
 
 .removeFromFavoriteButton {
+    float: right;
+    display: block;
     color: black;
     font-weight: 900;
-    width: 30px;
-    
+    max-width: 30px;
+    height: 20px;
+    margin-left: 25px;
 }
 
 @media only screen and (max-width: 828px) {
     .favorites_container {
         display: none;
+    }
+
+    .show {
+        display: inherit;
     }
 }
