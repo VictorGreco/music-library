@@ -22,7 +22,7 @@ class AdditionalParams extends React.Component<Props> {
         },
         limit: {
             checked: false,
-            value: '10'
+            value: '6'
         },
         countriesData: []
     }

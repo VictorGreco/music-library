@@ -9,7 +9,7 @@ const jsonp = require('jsonp');
 
 function App(): JSX.Element {
   const [searchResponse, setSearchResponse]: any = useState([]);
-  const [search, setSearch]: any = useState({ category: 'musicTrack', search_term: '' });
+  const [search, setSearch]: any = useState({ category: 'musicTrack', search_term: 'it\'s my life' });
   const [additionalParams, setAdditionalParams]: any = useState({
     country: {
       checked: false,
@@ -21,7 +21,7 @@ function App(): JSX.Element {
     },
     limit: {
       checked: false,
-      value: '10'
+      value: '6'
     }
   });
 
@@ -34,7 +34,7 @@ function App(): JSX.Element {
           country: additionalParams?.country?.checked ? additionalParams?.country.value : 'ES',
           media: 'music',
           entity: search?.category,
-          limit: additionalParams?.limit?.checked ? additionalParams?.limit.value : '10',
+          limit: additionalParams?.limit?.checked ? additionalParams?.limit.value : '6',
           lang: 'en_us',
           explicit: additionalParams?.explicit_content?.checked ? additionalParams?.explicit_content.value : 'No'
         },

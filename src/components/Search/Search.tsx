@@ -10,7 +10,7 @@ interface Props {
 class Search extends React.Component<Props> {
     state = {
         category: 'musicTrack',
-        search_term: ''
+        search_term: 'it\'s my life'
     }
     
     onSearchUpdate = (name: string, value: string ): void => {
