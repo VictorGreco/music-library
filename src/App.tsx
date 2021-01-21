@@ -10,6 +10,7 @@ const jsonp = require('jsonp');
 
 function App(): JSX.Element {
   const [searchResponse, setSearchResponse]: any = useState([]);
+  const [favoriteItems, setFavoriteItems]: any = useState([]);
   const [search, setSearch]: any = useState({ category: 'musicTrack', search_term: 'it\'s my life' });
   const [additionalParams, setAdditionalParams]: any = useState({
     country: {
@@ -57,13 +58,20 @@ function App(): JSX.Element {
     setSearch(state)
   }
 
+
+
+  const updateFavorites = function (title: string , media: string, buyNow: string): void {
+    setFavoriteItems([...favoriteItems, {...arguments}])
+    console.log(favoriteItems)
+  }
+
   return (
     <div className="App">
       <Search callback={onSearchChange} />
       <AdditionalParams callback={onFilterUpdates} />
       <div className="main_container">
-        <SearchResultDisplayer data={searchResponse?.data?.results} />
-        <FavoriteCollection />
+        <SearchResultDisplayer onClick={updateFavorites} data={searchResponse?.data?.results} />
+        <FavoriteCollection favorites={favoriteItems} />
       </div>
     </div>
   );

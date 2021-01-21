@@ -55,7 +55,23 @@ interface MusicVideoItem {
     trackViewUrl?: string;
 }
 
-function SearchResultDisplayer({ data }: any): JSX.Element {
+function SearchResultDisplayer({ data, onClick}: any): JSX.Element {
+
+    const songClickHandler = (e: any): void => {
+        const title = e.target.parentElement.parentElement.children[1].textContent
+        const media = e.target.parentElement.parentElement.children[3].getAttribute('src')
+        const buyNow = e.target.parentElement.parentElement.children[4].children[0].getAttribute('href')
+        onClick(title, media, buyNow)
+    }
+
+    const videoClickHandler = (e: any): void => {
+        const title = e.target.parentElement.parentElement.children[1].textContent
+        const media = e.target.parentElement.parentElement.children[5].children[0].getAttribute('src')
+        const buyNow = e.target.parentElement.parentElement.children[4].children[0].getAttribute('href')
+        onClick(title, media, buyNow)
+    }
+
+
     const millisToMinutesAndSeconds = (millis: number | undefined): string =>
         !!millis ? `${Math.floor(millis / 60000)} min ${((millis % 60000) / 1000).toFixed(0)} sec` : '';
 
@@ -65,6 +81,7 @@ function SearchResultDisplayer({ data }: any): JSX.Element {
                 <div>
                     <p>
                         <span>{kind?.toUpperCase()}</span> | <span>{contentAdvisoryRating || 'notExplicit'}</span>
+                        <button className="addToFavoriteButton" onClick={songClickHandler} >&hearts;</button>
                     </p>
                     <h3>{trackName} - {collectionName}</h3>
                     <h4>By <a target="_blank" href={artistViewUrl}>{artistName}</a> · {releaseDate?.split('-')[0]} · {millisToMinutesAndSeconds(trackTimeMillis)} · {primaryGenreName}</h4>
@@ -112,6 +129,7 @@ function SearchResultDisplayer({ data }: any): JSX.Element {
                 <div>
                     <p>
                         <span>{kind?.toUpperCase()}</span> | <span>{trackExplicitness || 'notExplicit'}</span>
+                        <button className="addToFavoriteButton" onClick={videoClickHandler} >&hearts;</button>
                     </p>
                     <h3>{trackName}</h3>
                     <h4>By <a target="_blank" href={artistViewUrl}>{artistName}</a></h4>

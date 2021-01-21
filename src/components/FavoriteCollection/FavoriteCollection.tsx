@@ -1,12 +1,13 @@
 import React from 'react';
 import './FavoriteCollection.css';
 
-class FavoriteCollection extends React.Component {
-    state = {
-        favorites: [{}]
-    }
-
-
+interface Props {
+    favorites: any
+}
+class FavoriteCollection extends React.Component<Props> {
+    
+    
+    
     
     render(): JSX.Element {
         return (
