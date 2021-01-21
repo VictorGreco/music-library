@@ -7,6 +7,8 @@ interface Props {
 }
 class FavoriteCollection extends React.Component<Props> {
 
+    favRef = React.createRef<HTMLDivElement>()
+
     removeHandler(e: any) {
         let title = e.target.parentElement.innerText.split('')
         title.pop()
@@ -52,14 +54,21 @@ class FavoriteCollection extends React.Component<Props> {
             return favoriteList;
         }
     }
+
+    expand() {
+        const node = this.favRef.current
+        if(node) {
+            console.log(node)
+            node.classList.toggle('show')
+        }
+    }
     
 
-    
     render(): JSX.Element {
         return (
             <div className="favorites">
-                <p className="favorites_title">Favorites <span>&hearts;</span></p>
-                <div className="favorites_container">
+                <p onClick={() => this.expand()} className="favorites_title">Favorites <span>&hearts;</span></p>
+                <div ref={this.favRef} className="favorites_container">
                     {this.generateFavoriteList()}
                 </div>
             </div>
