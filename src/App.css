@@ -21,3 +21,9 @@ a {
     display: flex;
     margin-top: 30px;
 }
+
+@media only screen and (max-width: 828px) {
+    .main_container {
+        flex-direction: column-reverse;
+    }
+}

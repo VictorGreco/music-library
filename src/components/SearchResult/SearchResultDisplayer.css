@@ -1,7 +1,9 @@
 .search-result-displayer {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
-    flex: 7;
+    flex: 5;
 }
 .card {
     display: flex;
@@ -14,6 +16,7 @@
     color: var(--back-color);
     background-color: var(--white);
     height: fit-content;
+    width: 400px;
 }
 .card div {
     display: flex;
@@ -45,15 +48,4 @@
 audio {
     width: 95%;
     height: 30px;
-}
-
-@media only screen and (max-width: 1024px) {
-    .card {
-        width: 45vw;
-    }
-} 
-@media only screen and (max-width: 450px) {
-    .card {
-        width: 100%;
-    }
 }
