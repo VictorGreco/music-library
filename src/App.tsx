@@ -69,13 +69,22 @@ function App(): JSX.Element {
     localStorage.setItem('favoriteItems', JSON.stringify(favoriteItems))
   }, [favoriteItems])
 
+
+  const removeFavorite = (title: string): void => {
+    const localdata = JSON.parse(`${localStorage.getItem('favoriteItems')}`)
+    const updatedList = localdata?.map((item: any, index: number) => {
+        if(item && item['0'].toString() !== title.toString()) return item
+    })
+    setFavoriteItems([...updatedList])
+  }
+
   return (
     <div className="App">
       <Search callback={onSearchChange} />
       <AdditionalParams callback={onFilterUpdates} />
       <div className="main_container">
         <SearchResultDisplayer onClick={updateFavorites} data={searchResponse?.data?.results} />
-        <FavoriteCollection favorites={favoriteItems}/>
+        <FavoriteCollection onClick={removeFavorite} favorites={favoriteItems}/>
       </div>
     </div>
   );
